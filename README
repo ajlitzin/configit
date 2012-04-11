@@ -1,0 +1,3 @@
+goal is to read in command line options which override json config which overrides default config values
+
+extension- add global json config which would fit between user json and default
