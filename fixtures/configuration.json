@@ -1,0 +1,25 @@
+{
+    "env": {
+        "dev": {
+            "UserName"  : "dev_login",
+            "Password"  : "password",
+            "Debug"     : "True",
+            "Verbose"   : "True",
+            "ConfigFile": "some/my/path/devconfig.txt"
+        },
+        "test": {
+            "UserName"  : "qa_login",
+            "Password"  : "P@ssW0rd!",
+            "Debug"     : "False",
+            "Verbose"   : "True",
+            "ConfigFile": "some/my/path/qaconfig.txt"
+        },
+        "prod": {
+            "UserName"  : "dev_login",
+            "Password"  : "",
+            "Debug"     : "False",
+            "Verbose"   : "False",
+            "ConfigFile": "fixtures/config.txt"
+        }
+    }
+}
