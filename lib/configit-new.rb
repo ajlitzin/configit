@@ -26,7 +26,7 @@ class CmdOptions
      end
      
 	 opts.on( '-u', '--user [USER]', 'User Name' ) do |user|
-       options.user = user
+       options.user_name = user
      end
  
      opts.on( '-p', '--passwd [PASSWORD]', 'Password' ) do |pass|
@@ -34,7 +34,7 @@ class CmdOptions
      end
  
      opts.on( '-c', '--conffile FILE', 'Config File location' ) do|file|
-       options.conffile = file
+       options.config_file = file
      end
  
      # This displays the help screen, all programs are
@@ -54,9 +54,9 @@ class CmdOptions
    if options.verbose
      puts "Being verbose"
      puts "Your Environment: #{options.env}" if options.env
-     puts "Got your user: #{options.user}" if options.user
+     puts "Got your user: #{options.user_name}" if options.user
      puts "Got your pass: #{options.password}" if options.password
-     puts "Reading config file: #{options.conffile}" if options.conffile
+     puts "Reading config file: #{options.config_file}" if options.conffile
    end
    options
   end # self.parse

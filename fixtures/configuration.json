@@ -1,23 +1,23 @@
 {
         "dev": {
-            "UserName"  : "dev_login",
-            "Password"  : "password",
-            "Debug"     : "True",
-            "Verbose"   : "True",
-            "ConfigFile": "some/my/path/devconfig.txt"
+            "user_name"  : "dev_login",
+            "password"  : "password",
+            "debug"     : "True",
+            "verbose"   : "True",
+            "config_file": "some/my/path/devconfig.txt"
         },
         "test": {
-            "UserName"  : "qa_login",
-            "Password"  : "P@ssW0rd!",
-            "Debug"     : "False",
-            "Verbose"   : "True",
-            "ConfigFile": "some/my/path/qaconfig.txt"
+            "user_name"  : "qa_login",
+            "password"  : "P@ssW0rd!",
+            "debug"     : "False",
+            "verbose"   : "True",
+            "config_file": "some/my/path/qaconfig.txt"
         },
         "prod": {
-            "UserName"  : "dev_login",
-            "Password"  : "",
-            "Debug"     : "False",
-            "Verbose"   : "False",
-            "ConfigFile": "fixtures/config.txt"
+            "user_name"  : "dev_login",
+            "password"  : "",
+            "debug"     : "False",
+            "verbose"   : "False",
+            "config_file": "fixtures/config.txt"
         }
 }
