@@ -1,12 +1,13 @@
 require 'json'
+require 'hashie'
+require 'pp'
 
 class JsonConfiguration
-  attr_accessor :env, :user, :password, :debug, :verbose, :config_file
-
-  def self.parse(conffile)
+  
+  def self.parse(conffile = nil)
     configuration_root_dir = File.join(File.dirname(__FILE__),"..","fixtures")
 
-    if conffile.empty?
+    if conffile.to_s.empty?
 	  file_contents = File.read "#{configuration_root_dir}/configuration.json"
 	else
 	  file_contents = File.read "#{configuration_root_dir}/#{conffile}"
@@ -16,6 +17,11 @@ class JsonConfiguration
     configuration_data = JSON.parse file_contents
   
     # figure out how to get hash into obj
-	# obj.env.property ?
-end
+	my_parse = Hashie::Mash.new(configuration_data)
+		
+  end # parse
+end # class
 
+test = JsonConfiguration.parse(nil)
+#test.parse(nil)
+puts test.dev.Password

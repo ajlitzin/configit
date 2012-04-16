@@ -1,5 +1,4 @@
 {
-    "env": {
         "dev": {
             "UserName"  : "dev_login",
             "Password"  : "password",
@@ -21,5 +20,4 @@
             "Verbose"   : "False",
             "ConfigFile": "fixtures/config.txt"
         }
-    }
 }
