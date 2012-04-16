@@ -23,5 +23,4 @@ class JsonConfiguration
 end # class
 
 test = JsonConfiguration.parse(nil)
-#test.parse(nil)
 puts test.dev.Password
