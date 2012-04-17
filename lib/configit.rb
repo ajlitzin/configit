@@ -6,9 +6,10 @@ class CmdOptions
 
   def self.parse(args)
     options = OpenStruct.new
+	# set the defaults
 	options.verbose = false
 	options.env = "dev"
-	options.conffile = nil
+	options.config_file = nil
 	
 	
     opts = OptionParser.new do|opts|
@@ -21,8 +22,8 @@ class CmdOptions
        options.verbose = true
      end
  
-     opts.on( '-e', '--environment [ENV]', 'Specify the environment' ) do
-       options.env = true
+     opts.on( '-e', '--environment [ENV]', 'Specify the environment' ) do |env|
+       options.env =  env
      end
      
 	 opts.on( '-u', '--user [USER]', 'User Name' ) do |user|
@@ -54,14 +55,14 @@ class CmdOptions
    if options.verbose
      puts "Being verbose"
      puts "Your Environment: #{options.env}" if options.env
-     puts "Got your user: #{options.user_name}" if options.user
+     puts "Got your user: #{options.user_name}" if options.user_name
      puts "Got your pass: #{options.password}" if options.password
-     puts "Reading config file: #{options.config_file}" if options.conffile
+     puts "Reading config file: #{options.config_file}" if options.config_file
    end
    options
   end # self.parse
 
 end # class
 
-options = CmdOptions.parse(ARGV)
-pp options
+#options = CmdOptions.parse(ARGV)
+#pp options

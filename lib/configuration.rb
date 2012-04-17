@@ -1,15 +1,16 @@
 class Configuration
-attr_accessor :env, :user, :password, :debug, :verbose, :config_file
+attr_accessor :env, :user_name, :password, :debug, :verbose, :config_file
   
-  def initialize
-    @env = "dev"
+  def initialize( env = "dev")
+    @env = env
+	puts @env
 	@debug = false
 	@verbose = false
 	@config_file = "configuration.json"
   end
   
   
-  def merge(configs=[])
+  def merge(env,configs=[])
     
     # for all the configurations,
       # apply this configuration for all the properites that I care about
