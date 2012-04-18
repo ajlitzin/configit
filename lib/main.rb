@@ -1,4 +1,4 @@
-require './configit.rb'
+require './CmdOptions.rb'
 require './json.rb'
 require './configuration.rb'
 
@@ -12,7 +12,7 @@ require './configuration.rb'
   pp cmd_options
 
 # code to get defaults
-  default_options = Configuration.new(cmd_options.env || nil)
+  default_options = Configuration.new(cmd_options.env)
   #default_options = JsonConfiguration.parse("default_configuration.json")
   pp "default debug option: #{default_options.debug}"
   
