@@ -4,7 +4,9 @@ require 'pp'
 
 class CmdOptions
 
-  def self.parse(args)
+  #def self.parse(args)
+  def self.parse
+    
     options = OpenStruct.new
 		
     opts = OptionParser.new do|opts|

@@ -30,4 +30,4 @@ require './configuration.rb'
 
 # how to implement a merge! so not to have to
 # create a temp object?
-  default_options.merge(cmd_options.env, global_options)
+  default_options.merge!(cmd_options.env, global_options)
